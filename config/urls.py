@@ -1,3 +1,6 @@
+from erp.core import urls as core_urls
+from erp.address import urls as address_urls
+from django.urls import include
 """erp URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -18,4 +21,6 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('main/', core_urls),
+    path('address/', address_urls),
 ]
